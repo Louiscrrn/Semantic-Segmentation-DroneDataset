@@ -1,7 +1,5 @@
 # Acceleration Material Project: Drone Dataset Semantic Segmentation
 
-**Group 6 : AZERINE Lorenzo, CARRON Louis**
-
 ## Problem tackled :
 
 This repository contains implementation (model, training, evalutation) of both **Binary** and **Multiclass** problem
