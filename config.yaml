@@ -1,0 +1,63 @@
+# config.yaml
+
+# Torch param
+torch :
+  seed: 42
+
+# Configuration du modèle
+model:
+  type: "MultiUnet" # "SegFormer" ou "MultiUnet" ou "UFormer" ou "UnetBinary" ou "BinarySegFormer"       
+  num_classes: 5 # 5 or 2
+  enc_weights: "imagenet"  #  "nvidia/mit-b0" ou "imagenet" ou "best"   
+
+# Paramètres d'entraînement
+training:
+  device: "cuda" # "cuda" or "cpu"
+  batch_size: 8            
+  epochs: 1              
+  learning_rate: 0.001        
+  tolerance: 0.0001   
+  output_path :  "gricad/test/" 
+  train_hist_name : 'hist_train.csv'
+  test_hist_name : 'hist_test.csv' 
+  num_workers: 4
+  scheduler: 'ReduceLROnPlateau'
+  factor: 0.1
+  patience: 3
+
+# Configuration des chemins de données
+data:
+  data_path: "../semantic-segmentation-drone-dataset/classes_dataset/classes_dataset/"
+  img_folder : "original_images/"
+  mask_folder : "label_images_semantic/" # "label_images_semantic/"
+  size : 400                
+  train : 0.8
+  val : 0.2
+  segmentation_mode : "multi" #  "multi" or "binary"
+
+# Apply a resize operation on the image, usefull when computing on your local PC
+transform:
+  active : 1
+  width : 256
+  height : 256 
+
+# Settings for the data augmentation
+augmentation:
+  active: 0
+  size : 600
+  RandomRotation : 30
+  HorizontalFlip : 1
+  zoom_in : 0.7
+
+# Choose the images index you want to predict
+test :
+  test_indexes : [1,2,3,4,5] # [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50] # [6,7,8,9,10] # [1,2,3,4,5]
+
+# Configuration de multi gpu
+distributed:
+  active: 0
+  backend: "nccl"
+  world_size: 2
+  master_addr: "127.0.0.1"
+  master_port: 29500
+      
