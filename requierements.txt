@@ -1,0 +1,10 @@
+torch>=1.13
+torchvision
+pandas
+PyYAML
+matplotlib
+plotly
+Pillow
+tqdm
+segmentation-models-pytorch
+transformers
