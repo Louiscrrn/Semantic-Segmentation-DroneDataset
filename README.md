@@ -156,9 +156,3 @@ A sample prediction result from the **SegFormer** model
 > This SegFormer prediction shows robust performance on large and structured regions, especially the **water body**, which is segmented with high precision. The model also correctly identifies many surrounding **obstacles** and patches of **nature**, even in complex, cluttered urban scenery. While some minor confusion persists between **moving** and **obstacle** classes in dense zones, the overall segmentation is consistent and well-aligned with the ground truth. This reflects SegFormer's strong ability to model long-range dependencies and handle heterogeneous scenes with fine details.
 
 ---
-
-## 🧑‍💻 Contributors
-
-- Louis Carron — [Main Developer]
-
----
