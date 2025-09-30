@@ -29,6 +29,9 @@ semantic-segmentation-drone-data/
 │   │   └── predictions.zip
 │   └── SegFormer/
 │       └── predictions.zip
+├── doc/
+│   ├── accel_mat_report_Azerine_Carron.pdf   # Final report
+│   └── accel_mat_slides_Azerine_Carron.pdf   # Slides
 ├── config.yaml                 # Main configuration file
 └── README.md                   # Project documentation
 ```
