@@ -3,14 +3,14 @@
 > Deep Learning project for binary and multiclass semantic segmentation on drone imagery.  
 > Developed as part of the SICOM S9 "Acceleration Material" course.
 
-## 📌 Overview
+## Overview
 
 This repository provides a complete pipeline for semantic segmentation on drone-acquired datasets using state-of-the-art models like **UNet**, **SegFormer**, and **UFormer**.  
 It supports training, evaluation, prediction visualization, and distributed training (for Gricad cluster).
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 semantic-segmentation-drone-data/
@@ -38,7 +38,7 @@ semantic-segmentation-drone-data/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Clone the Repository
 
@@ -59,7 +59,7 @@ pip install -r requirements.txt
 
 ---
 
-## ⚙️ Configuration
+## Configuration
 
 Update the `config.yaml` file to modify:
 
@@ -71,9 +71,9 @@ Update the `config.yaml` file to modify:
 
 ---
 
-## 📈 Usage
+## Usage
 
-### 🏋️ Train a model
+### Train a model
 
 ```bash
 python ./src/main.py
@@ -81,7 +81,7 @@ python ./src/main.py
 
 > Make sure `distributed::active` is disabled in `config.yaml` if running locally.
 
-### 🔍 Make predictions
+### Make predictions
 
 ```bash
 python ./src/predict.py
@@ -89,7 +89,7 @@ python ./src/predict.py
 
 > Update the model checkpoint path in `config.yaml`.
 
-### 📊 Plot learning curves
+### Plot learning curves
 
 ```bash
 python ./src/get_curves.py
@@ -97,9 +97,9 @@ python ./src/get_curves.py
 
 ---
 
-## 🖥️ Distributed Training on Gricad
+## Distributed Training on Gricad
 
-### 🔧 Setup
+### Setup
 
 1. Enable distributed training:
    ```yaml
@@ -117,7 +117,7 @@ python ./src/get_curves.py
 
 ---
 
-## 📦 Requirements
+## Requirements
 
 All dependencies are listed in `requirements.txt`.
 
@@ -132,7 +132,7 @@ Key packages include:
 
 ---
 
-## 📌 Notes
+## Notes
 
 - Predictions and curves **must be run with distributed mode off**.
 - Some models require **custom install steps** depending on your PyTorch version (e.g. for HuggingFace SegFormer).
@@ -140,7 +140,7 @@ Key packages include:
 
 ---
 
-## 📷 Results
+## Results
 
 Below is a sample prediction result from the **MultiUNet** model on the drone dataset:
 
