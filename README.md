@@ -1,7 +1,6 @@
 # Drone Semantic Segmentation
 
 > Deep Learning project for binary and multiclass semantic segmentation on drone imagery.  
-> Developed as part of the SICOM S9 "Acceleration Material" course.
 
 ## Overview
 
@@ -15,8 +14,7 @@ It supports training, evaluation, prediction visualization, and distributed trai
 ```
 semantic-segmentation-drone-data/
 ├── doc/
-│   ├── accel_mat_report_Azerine_Carron.pdf   # Final report
-│   └── accel_mat_slides_Azerine_Carron.pdf   # Slides
+│   └── slides.pdf  
 ├── src/
 │   ├── python/
 │   │   ├── droneDataset.py     # Dataset and preprocessing logic
